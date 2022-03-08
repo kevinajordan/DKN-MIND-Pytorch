@@ -1,0 +1,21 @@
+{
+    "learning_rate": 0.001,
+    "batch_size": 256,
+    
+    "word_dim": 100,
+    "kb_dim": 100,
+    "window_sizes" : [2, 3, 4],
+    "conv_size": 50,
+    "num_clicked_news_a_user": 50,
+    "pos_weight": 55,
+
+    "entity_confidence_threshold": 0.5,
+    "word_freq_threshold": 3,
+    "entity_freq_threshold": 3,
+    "pad_words_num": 20,
+    
+    "train_validation_split":[0.8, 0.2],
+    "epochs": 50,
+    "valid_every": 5,
+    "patience": 5
+}
