@@ -44,8 +44,7 @@ def main():
 
     # data loader
     logging.info("Process DataLoader...")
-    dataset = data_loader.DKNDataset(train_behaviors_dataset_path, train_news_dataset_path
-                                pad_words_num= params.pad_words_num, num_clicked_news_a_user=params.num_clicked_news_a_user)
+    dataset = data_loader.DKNDataset(train_behaviors_dataset_path, train_news_dataset_path, pad_words_num= params.pad_words_num, num_clicked_news_a_user=params.num_clicked_news_a_user)
     
     # split train & valid dataset
     train_size = int(params.train_validation_split[0] / sum(params.train_validation_split) * len(dataset))
