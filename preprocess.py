@@ -196,5 +196,12 @@ if __name__ == '__main__':
     clean_behaviors(test_behaviors_path, test_behaviors_o_path)
 
     print('Clean up news data')
-    clean_news(test_news_path, test_news_o_path, word2idx_path, entity2idx_path, mode='test', 
-               word_freq_threshold=params.word_freq_threshold, entity_freq_threshold=params.entity_freq_threshold, entity_confidence_threshold=params.entity_confidence_threshold, pad_words_num=params.pad_words_num))
+    clean_news(test_news_path, 
+                test_news_o_path, 
+                word2idx_path, 
+                entity2idx_path, 
+                mode='test',
+                word_freq_threshold=params.word_freq_threshold, 
+                entity_freq_threshold=params.entity_freq_threshold, 
+                entity_confidence_threshold=params.entity_confidence_threshold, 
+                pad_words_num=params.pad_words_num)
