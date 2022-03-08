@@ -35,8 +35,7 @@ def clean_dataset(behaviors_source, behaviors_target, news_source,
     behaviors.impressions = behaviors.impressions.str.split()
     print("behaviors.impressions: ", behaviors.impressions.head())
     behaviors = behaviors.explode('impressions').reset_index(drop=True)
-    behaviors['candidate_news'], behaviors[
-        'clicked'] = behaviors.impressions.str.split('-').str
+    behaviors['candidate_news'], behaviors['clicked'] = behaviors.impressions.str.split('-').str
     behaviors.clicked_news.fillna('', inplace=True)
     behaviors.to_csv(behaviors_target,
                      sep='\t',
