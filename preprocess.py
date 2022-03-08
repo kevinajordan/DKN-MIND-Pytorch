@@ -33,6 +33,7 @@ def clean_dataset(behaviors_source, behaviors_target, news_source,
                               usecols=[2, 3],
                               names=['clicked_news', 'impressions'])
     behaviors.impressions = behaviors.impressions.str.split()
+    print("behaviors.impressions: ", behaviors.impressions.head())
     behaviors = behaviors.explode('impressions').reset_index(drop=True)
     behaviors['candidate_news'], behaviors[
         'clicked'] = behaviors.impressions.str.split('-').str
