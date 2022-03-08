@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 import model.net as net
 import model.data_loader as data_loader
-from evaluate import evaluate
+#from evaluate import evaluate
 import utils.utils as utils
 
 import torch
