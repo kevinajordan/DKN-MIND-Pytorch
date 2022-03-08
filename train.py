@@ -57,7 +57,7 @@ def main():
     model = net.Net(entity_embedding= entity_embedding, context_embedding=context_embedding, 
                     device=params.device)
     model.to(params.device)
-    ddp_model = DDP(model, device_ids=[0,1,2,3,4,5,6,7,8,9,10])
+    ddp_model = DDP(model, device_ids=[0,1,2,3,4,5,6,7])
     optimizer = torch.optim.Adam(ddp_model.parameters(), lr=params.learning_rate)
     criterion = nn.BCEWithLogitsLoss(pos_weight=torch.tensor([23.7]).float().to(params.device))
     optimizer.zero_grad()
